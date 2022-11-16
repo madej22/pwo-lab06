@@ -2,6 +2,13 @@ package pwo.seq;
 
 import java.math.BigDecimal;
 
+/**
+ * Klasa generująca kolejne
+ * wyrazy ciągu Lucasa.
+ *
+ * @author madej
+ * @version 1.0.0
+ */
 public class LucasGenerator extends FibonacciGenerator {
 
     public LucasGenerator() {

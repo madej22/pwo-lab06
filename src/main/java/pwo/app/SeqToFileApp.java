@@ -5,12 +5,20 @@ import pwo.utils.SequenceTools;
 import java.nio.file.Paths;
 import java.nio.file.InvalidPathException;
 
+/**
+ * Klasa zawierająca funkcje służące do zapisywania
+ * liczb wygenerowanych przez generatory do pliku.
+ */
 class SeqToFileApp {
 
     protected SeqType seqType = null;
     protected Integer from = null, to = null;
     protected String fileName = null;
 
+    /**
+     * Funkcja pobierająca argumenty
+     * z konfiguracji uruchomieniowej projektu.
+     */
     protected boolean getArgs(String[] args) {
         try {
             seqType = SeqType.fromString(args[0]);
@@ -29,11 +37,18 @@ class SeqToFileApp {
         return seqType != null && from >= 0 && to >= 0;
     }
 
+    /**
+     * Funkcja inicjująca generator liczbowy
+     * i zapisująca wygenerowane liczby do pliku.
+     */
     protected boolean wirteSeq() {
         return SequenceTools.writeToFile(seqType.getGenerator(),
                 from, to, fileName);
     }
 
+    /**
+     * Funkcja uruchamiająca generator liczbowy.
+     */
     public void run(String[] args) {
         System.out.println("Sequence to file CLI app");
         if (!getArgs(args)) {

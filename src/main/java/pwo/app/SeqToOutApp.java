@@ -6,6 +6,10 @@ package pwo.app;
 
 import pwo.utils.SequenceTools;
 
+/**
+ * Klasa zawierająca funkcje służące do wypisywania
+ * liczb wygenerowanych przez generatory w konsoli IDE.
+ */
 public class SeqToOutApp extends SeqToFileApp {
 
     @Override
@@ -16,6 +20,10 @@ public class SeqToOutApp extends SeqToFileApp {
         return seqType != null && from >= 0 && to >= 0;
     }
 
+    /**
+     * Funkcja inicjująca generator liczbowy
+     * i wypisująca wygenerowane liczby w konsoli.
+     */
     @Override
     protected boolean wirteSeq() {
         System.out.println(SequenceTools.getTermsAsColumn(

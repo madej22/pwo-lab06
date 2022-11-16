@@ -1,5 +1,11 @@
 package pwo.app;
 
+/**
+ * Główna klasa uruchomieniowa projektu.
+ * 
+ * @author madej
+ * @version 1.0.0
+ */
 public class Sequence {
 
     public static void main(String[] args) {
